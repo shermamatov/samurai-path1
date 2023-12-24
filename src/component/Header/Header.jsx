@@ -14,7 +14,6 @@ const Header = () => {
                         <li className="ml-6">Блок 2</li>
                         <li className="ml-6">Блок 3</li>
                         <li className="ml-6">Блок 4</li>
-                        <li className="ml-6">Блок 5</li>
                     </ul>
                 </div>
                 <div>

@@ -1,7 +1,8 @@
 import React from "react";
-import Block1 from "../component/Home/block1/Block1";
-import Block2 from "../component/Home/block2/Block2";
-import Block3 from "../component/Home/block3/Block3";
+import Block1 from "../component/Home/Block1";
+import Block2 from "../component/Home/Block2";
+import Block3 from "../component/Home/Block3";
+import Block4 from "../component/Home/Block4";
 
 const Home = () => {
     return (
@@ -9,6 +10,7 @@ const Home = () => {
             <Block1 />
             <Block2 />
             <Block3 />
+            <Block4 />
         </div>
     );
 };
