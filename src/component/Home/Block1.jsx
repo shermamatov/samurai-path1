@@ -13,7 +13,6 @@ const Block1 = () => {
                 backgroundPosition: "start",
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
-                objectFit: "cover",
             }}
         >
             <div className="content text-center flex justify-center items-center flex-col h-[85vh]">

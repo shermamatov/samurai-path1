@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../assets/Logo.svg";
 import burgerMenuIcon from "../../assets/burgerMenu.svg";
+import BurgerMenu from "./BurgerMenu";
 const Header = () => {
+    let [burgerState, setBurgerState] = useState(false);
     return (
         <div>
-            <div className="content flex justify-between h-20 items-center ">
+            <div className="content flex justify-between h-20 items-center relative">
                 <div>
                     <img src={logo} alt="" />
                 </div>
@@ -21,11 +23,18 @@ const Header = () => {
                         Кнопка призыва
                     </button>
                 </div>
-                <img
-                    className="w-5 block md:hidden"
-                    src={burgerMenuIcon}
-                    alt=""
-                />
+                <div className="block md:hidden">
+                    <img
+                        onClick={() => setBurgerState(true)}
+                        className="w-5 block md:hidden"
+                        src={burgerMenuIcon}
+                        alt=""
+                    />
+                    <BurgerMenu
+                        burgerState={burgerState}
+                        setBurgerState={setBurgerState}
+                    />
+                </div>
             </div>
         </div>
     );
