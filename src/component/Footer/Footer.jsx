@@ -5,8 +5,8 @@ import telegram from "../../assets/telegramIcon.svg";
 import vk from "../../assets/vkIcon.svg";
 const Footer = () => {
     return (
-        <div>
-            <div className="content flex flex-col justify-center items-center mt-20">
+        <div className="border-t-2 pt-14 border-gray-500">
+            <div className="content flex flex-col justify-center items-center">
                 <img src={logo} alt="" />
                 <ul className="flex max-w-96 w-[90%] justify-between mt-10">
                     <li>Блок 1</li>
