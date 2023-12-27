@@ -32,8 +32,8 @@ export let arr = [
             "https://www.marshallheadphones.com/dw/image/v2/BCQL_PRD/on/demandware.static/-/Library-Sites-SharedLibrary-Marshall/default/dw116fde54/images/categories/headphones/major-iv/both/usp05-major-iv.jpg?sw=1234&sh=2000&sm=fit",
         charImg2:
             "https://www.marshallheadphones.com/dw/image/v2/BCQL_PRD/on/demandware.static/-/Library-Sites-SharedLibrary-Marshall/default/dw4ae17d4d/images/categories/headphones/major-iv/both/usp04-major-iv.jpg?sw=1234&sh=2000&sm=fit",
-        charTitle: "80+ ЧАСОВ БЕСПРОВОДНОЙ ИГРЫ",
-        charDesc:
+        charTitle1: "80+ ЧАСОВ БЕСПРОВОДНОЙ ИГРЫ",
+        charDesc1:
             'Major IV обеспечивает более 80 часов беспроводного воспроизведения с возможностью быстрой зарядки – всего 15 минут зарядки обеспечат вам 15 часов прослушивания. Это наушники, действительно рассчитанные на долгую жизнь."',
         charTitle2: "КУЛЬТОВЫЙ ДИЗАЙН MARSHALL",
         charDesc2:
@@ -52,8 +52,8 @@ export let arr = [
             "https://www.marshallheadphones.com/dw/image/v2/BCQL_PRD/on/demandware.static/-/Library-Sites-SharedLibrary-Marshall/default/dw116fde54/images/categories/headphones/major-iv/both/usp05-major-iv.jpg?sw=1234&sh=2000&sm=fit",
         charImg2:
             "https://www.marshallheadphones.com/dw/image/v2/BCQL_PRD/on/demandware.static/-/Library-Sites-SharedLibrary-Marshall/default/dw4ae17d4d/images/categories/headphones/major-iv/both/usp04-major-iv.jpg?sw=1234&sh=2000&sm=fit",
-        charTitle: "80+ ЧАСОВ БЕСПРОВОДНОЙ ИГРЫ",
-        charDesc:
+        charTitle1: "80+ ЧАСОВ БЕСПРОВОДНОЙ ИГРЫ",
+        charDesc1:
             'Major IV обеспечивает более 80 часов беспроводного воспроизведения с возможностью быстрой зарядки – всего 15 минут зарядки обеспечат вам 15 часов прослушивания. Это наушники, действительно рассчитанные на долгую жизнь."',
         charTitle2: "КУЛЬТОВЫЙ ДИЗАЙН MARSHALL",
         charDesc2:
@@ -72,8 +72,8 @@ export let arr = [
             "https://www.marshallheadphones.com/dw/image/v2/BCQL_PRD/on/demandware.static/-/Library-Sites-SharedLibrary-Marshall/default/dw116fde54/images/categories/headphones/major-iv/both/usp05-major-iv.jpg?sw=1234&sh=2000&sm=fit",
         charImg2:
             "https://www.marshallheadphones.com/dw/image/v2/BCQL_PRD/on/demandware.static/-/Library-Sites-SharedLibrary-Marshall/default/dw4ae17d4d/images/categories/headphones/major-iv/both/usp04-major-iv.jpg?sw=1234&sh=2000&sm=fit",
-        charTitle: "80+ ЧАСОВ БЕСПРОВОДНОЙ ИГРЫ",
-        charDesc:
+        charTitle1: "80+ ЧАСОВ БЕСПРОВОДНОЙ ИГРЫ",
+        charDesc1:
             'Major IV обеспечивает более 80 часов беспроводного воспроизведения с возможностью быстрой зарядки – всего 15 минут зарядки обеспечат вам 15 часов прослушивания. Это наушники, действительно рассчитанные на долгую жизнь."',
         charTitle2: "КУЛЬТОВЫЙ ДИЗАЙН MARSHALL",
         charDesc2:
@@ -92,8 +92,8 @@ export let arr = [
             "https://www.marshallheadphones.com/dw/image/v2/BCQL_PRD/on/demandware.static/-/Library-Sites-SharedLibrary-Marshall/default/dw116fde54/images/categories/headphones/major-iv/both/usp05-major-iv.jpg?sw=1234&sh=2000&sm=fit",
         charImg2:
             "https://www.marshallheadphones.com/dw/image/v2/BCQL_PRD/on/demandware.static/-/Library-Sites-SharedLibrary-Marshall/default/dw4ae17d4d/images/categories/headphones/major-iv/both/usp04-major-iv.jpg?sw=1234&sh=2000&sm=fit",
-        charTitle: "80+ ЧАСОВ БЕСПРОВОДНОЙ ИГРЫ",
-        charDesc:
+        charTitle1: "80+ ЧАСОВ БЕСПРОВОДНОЙ ИГРЫ",
+        charDesc1:
             'Major IV обеспечивает более 80 часов беспроводного воспроизведения с возможностью быстрой зарядки – всего 15 минут зарядки обеспечат вам 15 часов прослушивания. Это наушники, действительно рассчитанные на долгую жизнь."',
         charTitle2: "КУЛЬТОВЫЙ ДИЗАЙН MARSHALL",
         charDesc2:
@@ -112,8 +112,8 @@ export let arr = [
             "https://www.marshallheadphones.com/dw/image/v2/BCQL_PRD/on/demandware.static/-/Library-Sites-SharedLibrary-Marshall/default/dw116fde54/images/categories/headphones/major-iv/both/usp05-major-iv.jpg?sw=1234&sh=2000&sm=fit",
         charImg2:
             "https://www.marshallheadphones.com/dw/image/v2/BCQL_PRD/on/demandware.static/-/Library-Sites-SharedLibrary-Marshall/default/dw4ae17d4d/images/categories/headphones/major-iv/both/usp04-major-iv.jpg?sw=1234&sh=2000&sm=fit",
-        charTitle: "80+ ЧАСОВ БЕСПРОВОДНОЙ ИГРЫ",
-        charDesc:
+        charTitle1: "80+ ЧАСОВ БЕСПРОВОДНОЙ ИГРЫ",
+        charDesc1:
             'Major IV обеспечивает более 80 часов беспроводного воспроизведения с возможностью быстрой зарядки – всего 15 минут зарядки обеспечат вам 15 часов прослушивания. Это наушники, действительно рассчитанные на долгую жизнь."',
         charTitle2: "КУЛЬТОВЫЙ ДИЗАЙН MARSHALL",
         charDesc2:

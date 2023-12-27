@@ -9,13 +9,13 @@ const Block1 = () => {
             style={{
                 backgroundImage: `url(${width > 768 ? banner : bannerAdap})`,
                 backdropFilter: "blur(10px)",
-                backgroundAttachment: "fixed",
+                // backgroundAttachment: "fixed",
                 backgroundPosition: "start",
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
             }}
         >
-            <div className="content text-center flex justify-center items-center flex-col h-[85vh]">
+            <div className="content text-center flex justify-center items-center flex-col h-[86vh] mob:h-[90vh]">
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl mt-[-120px] sm:mt-0">
                     Бескомпромиссное Звучание
                 </h1>
