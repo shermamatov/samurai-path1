@@ -4,7 +4,7 @@ import deliveryIcon from "../../assets/delivery.svg";
 import headphonesIcon from "../../assets/headphone.svg";
 const Block2 = () => {
     return (
-        <div className="bg-[#1F1F1F]">
+        <div className="">
             <div className="content pt-20 pb-20 ">
                 <h2 className="text-center text-3xl sm:text-5xl">
                     Наши приемущества

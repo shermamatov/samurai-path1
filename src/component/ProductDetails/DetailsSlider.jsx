@@ -31,7 +31,7 @@ export default function DetailsSlider() {
             >
                 {arr.map((item) => (
                     <SwiperSlide key={item.id}>
-                        <img src={item.img} alt="#" />
+                        <img src={item.mainImg} alt="#" />
                     </SwiperSlide>
                 ))}
             </Swiper>
@@ -47,7 +47,7 @@ export default function DetailsSlider() {
             >
                 {arr.map((item) => (
                     <SwiperSlide key={item.id}>
-                        <img src={item.img} alt="#" />
+                        <img src={item.mainImg} alt="#" />
                     </SwiperSlide>
                 ))}
             </Swiper>

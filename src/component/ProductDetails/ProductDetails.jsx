@@ -4,6 +4,7 @@ import Block4 from "../Home/Block4";
 import DetailsSlider from "./DetailsSlider";
 import { arr } from "../../const";
 import ProductChar from "./ProductChar";
+import ProductReveiws from "./ProductReveiws";
 
 const ProductDetails = () => {
     let { id } = useParams();
@@ -30,6 +31,28 @@ const ProductDetails = () => {
                             {oneProduct.have ? "в наличии" : "нет в наличии"}
                         </span>
                     </button>
+                    {/* <div className="absolute z-10 top-1 right-1 left-1 mob:left-2 mob:top-2 mob:right-2 flex justify-between">
+                        <button
+                            className={`flex justify-center items-center rounded-lg  w-[30%] h-8  ${
+                                oneProduct.have ? "bg-sky-500" : "bg-red-500"
+                            }`}
+                        >
+                            <span className="lg:text-sm text-base">
+                                {oneProduct.have
+                                    ? "в наличии"
+                                    : "нет в наличии"}
+                            </span>
+                        </button>
+                        {oneProduct.discount > 0 && (
+                            <button
+                                className={`flex justify-center items-center rounded-lg  w-[30%] h-8  bg-green-700`}
+                            >
+                                <span className="lg:text-sm mob:text-xs text-[8px] ">
+                                    скидки!
+                                </span>
+                            </button>
+                        )}
+                    </div> */}
                 </div>
                 <div className="w-[100%] md:w-[58%] flex flex-col justify-center mt-8 md:mt-0">
                     <div>
@@ -41,9 +64,24 @@ const ProductDetails = () => {
                         </p>
                     </div>
                     <div className="mt-6 flex flex-col">
-                        <strong className=" text-2xl text-sky-500">
+                        {/* <strong className=" text-2xl text-sky-500">
                             {oneProduct.price}сом
-                        </strong>
+                        </strong> */}
+                        {oneProduct.discount > 0 ? (
+                            <div className="flex items-end">
+                                <p className="text-2xl font-semibold text-sky-500 ">
+                                    {oneProduct.discount} сом
+                                </p>
+                                <p className=" text-gray-400 line-through ml-2">
+                                    {oneProduct.price} сом
+                                </p>
+                            </div>
+                        ) : (
+                            <strong className="text-2xl text-sky-500">
+                                {oneProduct.price} сом
+                            </strong>
+                        )}
+
                         <button className="bg-sky-500 w-[100%] mob:w-32 h-10 rounded mt-4 ">
                             купить
                         </button>
@@ -51,7 +89,7 @@ const ProductDetails = () => {
                 </div>
             </div>
             <ProductChar item={oneProduct} />
-            <Block4 />
+            <ProductReveiws />
         </div>
     );
 };
