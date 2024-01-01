@@ -2,7 +2,7 @@ import React from "react";
 
 const Block5 = () => {
     return (
-        <div className="bg-[#1F1F1F]">
+        <div className="">
             <div className="content pt-20 pb-20 ">
                 <h1 className="text-center text-3xl sm:text-5xl mb-5">о нас</h1>
                 <p className="text-gray-300 text-xs sm:text-sm">

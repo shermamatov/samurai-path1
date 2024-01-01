@@ -15,23 +15,23 @@ const ProductCard = ({ item }) => {
                     alt=""
                 />
                 <div className="absolute top-2 left-2 right-2 flex justify-between">
-                    <button
-                        className={`rounded-lg w-[40%] h-4 mob:h-6 ${
+                    <div
+                        className={`rounded-md flex justify-center items-center w-[40%] h-4 mob:h-6 ${
                             item.have ? "bg-sky-500" : "bg-red-500"
                         }`}
                     >
                         <span className="lg:text-sm mob:text-xs text-[8px] ">
                             {item.have ? "в наличии" : "нет в наличии"}
                         </span>
-                    </button>
+                    </div>
                     {item.discount > 0 && (
-                        <button
-                            className={`rounded-md w-[40%] h-4 mob:h-6 bg-green-700`}
+                        <div
+                            className={`rounded-md flex justify-center items-center w-[40%] h-4 mob:h-6 bg-green-700`}
                         >
                             <span className="lg:text-sm mob:text-xs text-[8px] ">
                                 скидка!
                             </span>
-                        </button>
+                        </div>
                     )}
                 </div>
             </div>
