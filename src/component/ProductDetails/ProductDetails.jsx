@@ -27,7 +27,7 @@ const ProductDetails = () => {
                             oneProduct.have ? "bg-sky-500" : "bg-red-500"
                         }`}
                     >
-                        <span className="lg:text-sm text-base">
+                        <span className="lg:text-sm text-xs">
                             {oneProduct.have ? "в наличии" : "нет в наличии"}
                         </span>
                     </button>
