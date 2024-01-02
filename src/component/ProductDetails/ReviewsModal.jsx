@@ -84,12 +84,12 @@ const ReviewsModal = ({ setReviewsModal }) => {
                 {/* </div> */}
                 <div className="mt-8 w-[90%] m-auto">
                     <input
-                        className="w-full h-8 rounded-sm pl-2 text-black"
+                        className="w-full h-10 rounded-sm pl-2 text-black"
                         placeholder="Имя"
                         type="text"
                     />
                     <textarea
-                        className="w-full mt-2 h-32 rounded-sm pl-2 text-black"
+                        className="w-full mt-2 h-36 rounded-sm pl-2 text-black"
                         placeholder="Отзыв"
                         type="text"
                     />
