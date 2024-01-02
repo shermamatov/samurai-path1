@@ -5,6 +5,7 @@ import DetailsSlider from "./DetailsSlider";
 import { arr } from "../../const";
 import ProductChar from "./ProductChar";
 import ProductReveiws from "./ProductReveiws";
+import bag from "../../assets/bagAdap.svg";
 
 const ProductDetails = () => {
     let { id } = useParams();
@@ -81,10 +82,19 @@ const ProductDetails = () => {
                                 {oneProduct.price} сом
                             </strong>
                         )}
-
-                        <button className="bg-sky-500 w-[100%] mob:w-32 h-10 rounded mt-4 ">
-                            купить
-                        </button>
+                        <div className="grid grid-cols-3 mob:flex">
+                            <button className="bg-sky-500 col-span-2 mob:w-32 h-10 rounded mt-4 text-sm">
+                                купить сейчас
+                            </button>
+                            <button className="bg-[#E80E2B] text-sm ml-2 col-span-1 mob:w-32 h-10 rounded mt-4 flex justify-center items-center">
+                                в корзину
+                                <img
+                                    className="w-5 h-5 ml-1"
+                                    src={bag}
+                                    alt=""
+                                />
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
