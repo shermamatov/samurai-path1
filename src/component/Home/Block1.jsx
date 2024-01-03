@@ -24,7 +24,7 @@ const Block1 = () => {
                     наушниками. Погрузитесь в качество звучания
                 </p>
                 <button className="w-40 h-10 mt-5 text-xs border-inherit rounded-md bg-sky-600 text-white">
-                    Кнопка призыва
+                    перейти в каталог
                 </button>
             </div>
         </div>
