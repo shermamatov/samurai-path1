@@ -13,20 +13,26 @@ const Header = () => {
     return (
         <div>
             <div className="content flex justify-between h-20 items-center relative">
-                <div onClick={() => navigate("/")}>
+                <div className="cursor-pointer" onClick={() => navigate("/")}>
                     <img src={logo} alt="" />
                 </div>
                 <div>
                     <ul className="hidden md:flex">
-                        <li className="cursor-pointer">Блок 1</li>
+                        <li className="cursor-pointer">Главная</li>
+                        <li className="ml-6 cursor-pointer">Каталог</li>
                         <li
-                            onClick={() => setCartState(true)}
+                            onClick={() => navigate("/about_us")}
                             className="ml-6 cursor-pointer"
                         >
-                            Блок 2
+                            О нас
                         </li>
-                        <li className="ml-6 cursor-pointer">Блок 3</li>
-                        <li className="ml-6 cursor-pointer">Блок 4</li>
+                        <li
+                            onClick={() => navigate("/contact_us")}
+                            className="ml-6 cursor-pointer"
+                        >
+                            Контакты
+                        </li>
+                        {/* <li className="ml-6 cursor-pointer">Доставка</li> */}
                     </ul>
                 </div>
                 <div>
