@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Cart.scss";
 import plus from "../../assets/plus.svg";
 import minus from "../../assets/minus.svg";
-import cancel from "../../assets/cancel.svg";
+import cancel from "../../assets/cancelB.svg";
 import deleteIcon from "../../assets/delete.svg";
 
 const Cart = ({ setCartState }) => {
