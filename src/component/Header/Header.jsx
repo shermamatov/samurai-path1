@@ -69,12 +69,16 @@ const Header = () => {
                         <div className="w-3 right-[10px] top-0 text-[8px] flex justify-center items-center h-3 rounded-full bg-sky-500 absolute">
                             1
                         </div>
-                        <img className="mr-3" src={bagAdap} alt="картинка" />
+                        <img
+                            className="w-7 mr-3"
+                            src={bagAdap}
+                            alt="картинка"
+                        />
                     </div>
                     <div className="block md:hidden">
                         <img
                             onClick={() => setBurgerState(true)}
-                            className="w-5 block md:hidden"
+                            className="w-6 block md:hidden"
                             src={burgerMenuIcon}
                             alt="картинка"
                         />

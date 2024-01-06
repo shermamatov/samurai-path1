@@ -1,9 +1,12 @@
 import React from "react";
 import { arr } from "../../const";
 import ProductCard from "../ProductCard/ProductCard";
-import filterIcon from "../../assets/filterIcon.svg";
-import arrowRightIcon from "../../assets/arrow_right.svg";
+// import filterIcon from "../../assets/filterIcon.svg";
+// import arrowRightIcon from "../../assets/arrow_right.svg";
 import FilterBlock from "./FilterBlock";
+import { Pagination } from "@mui/material";
+import Stack from "@mui/material/Stack";
+import "./Catalog.scss";
 // import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 const Catalog = () => {
     return (
@@ -13,10 +16,21 @@ const Catalog = () => {
                 <div className="md:col-start-1 lg:col-end-2 md:col-end-4 relative">
                     <FilterBlock />
                 </div>
-                <div className=" lg:col-start-2 md:col-start-4 lg:col-end-6 md:col-end-11 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {arr.map((item) => (
-                        <ProductCard key={item.id} item={item} />
-                    ))}
+                <div className=" lg:col-start-2 md:col-start-4 lg:col-end-6 md:col-end-11 ">
+                    <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {arr.map((item) => (
+                            <ProductCard key={item.id} item={item} />
+                        ))}
+                    </div>
+                    <div className="flex justify-center md:justify-end mt-16">
+                        <Stack spacing={2}>
+                            <Pagination
+                                count={8}
+                                variant="outlined"
+                                shape="rounded"
+                            />
+                        </Stack>
+                    </div>
                 </div>
             </div>
         </div>
