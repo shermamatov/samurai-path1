@@ -4,7 +4,7 @@ import { arr2 } from "../../const";
 
 const Block4 = () => {
     return (
-        <div className="pt-10 pb-10 ">
+        <div className="pt-0 mob:pt-10 pb-10 ">
             <h2 className="text-center text-3xl sm:text-5xl mb-5">
                 Наши отзывы
             </h2>

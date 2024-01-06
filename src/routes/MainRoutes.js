@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import ProductDetailsPage from "../pages/ProductDetailsPage";
 import AboutUsPage from "../pages/AboutUsPage";
 import ContactUsPage from "../pages/ContactUsPage";
+import CatalogPage from "../pages/CatalogPage";
 
 const MainRoutes = () => {
     const userRoutes = [
@@ -11,6 +12,7 @@ const MainRoutes = () => {
         { link: "/about_us", element: <AboutUsPage />, id: 2 },
         { link: "/product/:name/:id", element: <ProductDetailsPage />, id: 3 },
         { link: "/contact_us", element: <ContactUsPage />, id: 4 },
+        { link: "/catalog", element: <CatalogPage />, id: 4 },
     ];
     return (
         <>

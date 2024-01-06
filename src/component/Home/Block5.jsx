@@ -36,7 +36,7 @@ const Block5 = () => {
                     <img
                         className="w-full md:w-[45%] rounded-md mt-5"
                         src="https://i.pinimg.com/564x/07/f3/36/07f33600bf38daa0032acacb30c6a9ff.jpg"
-                        alt=""
+                        alt="картинка"
                     />
                 </div>
             </div>

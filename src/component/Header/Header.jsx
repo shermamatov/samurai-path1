@@ -14,12 +14,22 @@ const Header = () => {
         <div>
             <div className="content flex justify-between h-20 items-center relative">
                 <div className="cursor-pointer" onClick={() => navigate("/")}>
-                    <img src={logo} alt="" />
+                    <img src={logo} alt="картинка" />
                 </div>
                 <div>
                     <ul className="hidden md:flex">
-                        <li className="cursor-pointer">Главная</li>
-                        <li className="ml-6 cursor-pointer">Каталог</li>
+                        <li
+                            onClick={() => navigate("/")}
+                            className="cursor-pointer"
+                        >
+                            Главная
+                        </li>
+                        <li
+                            onClick={() => navigate("/catalog")}
+                            className="ml-6 cursor-pointer"
+                        >
+                            Каталог
+                        </li>
                         <li
                             onClick={() => navigate("/about_us")}
                             className="ml-6 cursor-pointer"
@@ -41,7 +51,11 @@ const Header = () => {
                         className="relative hidden font-semibold md:flex items-center justify-center w-40 h-10 text-sky-500 text-xs border-inherit rounded-md border-2 border-sky-500"
                     >
                         корзина
-                        <img className="w-5 h-5 ml-1" src={bag} alt="" />
+                        <img
+                            className="w-5 h-5 ml-1"
+                            src={bag}
+                            alt="картинка"
+                        />
                         <div className="absolute flex items-center justify-center -top-1 -right-1 rounded-full w-5 h-5 text-white  bg-sky-500">
                             1
                         </div>
@@ -55,14 +69,14 @@ const Header = () => {
                         <div className="w-3 right-[10px] top-0 text-[8px] flex justify-center items-center h-3 rounded-full bg-sky-500 absolute">
                             1
                         </div>
-                        <img className="mr-3" src={bagAdap} alt="" />
+                        <img className="mr-3" src={bagAdap} alt="картинка" />
                     </div>
                     <div className="block md:hidden">
                         <img
                             onClick={() => setBurgerState(true)}
                             className="w-5 block md:hidden"
                             src={burgerMenuIcon}
-                            alt=""
+                            alt="картинка"
                         />
                         <BurgerMenu
                             burgerState={burgerState}

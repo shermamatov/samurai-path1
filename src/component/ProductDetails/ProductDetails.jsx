@@ -21,7 +21,7 @@ const ProductDetails = () => {
         <div>
             <div className="content flex flex-col md:flex-row justify-between pt-10 mob:pt-20 pb-10">
                 <div className="w-100 md:w-[38%] relative">
-                    {/* <img className="rounded-lg" src={oneProduct.img} alt="" /> */}
+                    {/* <img className="rounded-lg" src={oneProduct.img} alt="картинка" /> */}
                     <DetailsSlider />
                     <button
                         className={`z-10 absolute flex justify-center items-center rounded-lg top-1 right-1 mob:top-2 mob:right-2 w-[30%] h-8  ${
@@ -91,7 +91,7 @@ const ProductDetails = () => {
                                 <img
                                     className="w-5 h-5 ml-1"
                                     src={bag}
-                                    alt=""
+                                    alt="картинка"
                                 />
                             </button>
                         </div>

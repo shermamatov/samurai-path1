@@ -11,7 +11,11 @@ const Block2 = () => {
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-6 lg:justify-between text-center mt-12">
                     <div className="flex justify-center sm:flex-col items-center">
-                        <img className="w-14 sm:w-16" src={moneyIcon} alt="" />
+                        <img
+                            className="w-14 sm:w-16"
+                            src={moneyIcon}
+                            alt="картинка"
+                        />
                         <div className="text-start sm:text-center ml-5 w-[80%] mt-0 sm:mt-4">
                             <strong className="text-lg sm:text-xl mt-4 mb-4">
                                 Доступные цены
@@ -26,7 +30,7 @@ const Block2 = () => {
                         <img
                             className="w-14 sm:w-16"
                             src={deliveryIcon}
-                            alt=""
+                            alt="картинка"
                         />
                         <div className="text-start sm:text-center ml-5 w-[80%] mt-0 sm:mt-4">
                             <strong className="text-lg sm:text-xl mt-4 mb-4">
@@ -42,7 +46,7 @@ const Block2 = () => {
                         <img
                             className="w-14 sm:w-16"
                             src={headphonesIcon}
-                            alt=""
+                            alt="картинка"
                         />
                         <div className="text-start sm:text-center ml-5 w-[80%] mt-0 sm:mt-4">
                             <strong className="text-lg sm:text-xl mt-4 mb-4">

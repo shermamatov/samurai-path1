@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="border-t-2 pt-14 border-gray-500">
             <div>
                 <div className="content flex flex-col justify-center items-center">
-                    <img src={logo} alt="" />
+                    <img src={logo} alt="картинка" />
                     <ul className="flex max-w-96 w-[90%] justify-between mt-10">
                         <li>Блок 1</li>
                         <li className="ml-6">Блок 2</li>
@@ -16,9 +16,9 @@ const Footer = () => {
                         <li className="ml-6">Блок 4</li>
                     </ul>
                     <div className="flex w-40 justify-between mt-10">
-                        <img src={instagram} alt="" />
-                        <img src={telegram} alt="" />
-                        <img src={vk} alt="" />
+                        <img src={instagram} alt="картинка" />
+                        <img src={telegram} alt="картинка" />
+                        <img src={vk} alt="картинка" />
                     </div>
                     <strong className="mt-10">© The Path of the Samurai</strong>
                 </div>
