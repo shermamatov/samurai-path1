@@ -70,7 +70,7 @@ const Cart = ({ setCartState }) => {
                             className="cursor-pointer"
                             onClick={() => setCartState(false)}
                             src={cancel}
-                            alt=""
+                            alt="картинка"
                         />
                     </div>
                     <div className="products">
@@ -79,7 +79,7 @@ const Cart = ({ setCartState }) => {
                                 <img
                                     className="w-[60px] h-[60]"
                                     src={item.mainImg}
-                                    alt=""
+                                    alt="картинка"
                                 />
                                 <div>
                                     <span>{item.title}</span>
@@ -91,7 +91,7 @@ const Cart = ({ setCartState }) => {
                                             setCounter(item.id, "minus")
                                         }
                                     >
-                                        <img src={minus} alt="" />
+                                        <img src={minus} alt="картинка" />
                                     </button>
                                     <label>{item.count}</label>
                                     <button
@@ -100,7 +100,7 @@ const Cart = ({ setCartState }) => {
                                             setCounter(item.id, "plus")
                                         }
                                     >
-                                        <img src={plus} alt="" />
+                                        <img src={plus} alt="картинка" />
                                     </button>
                                 </div>
                                 <label className="price small">
@@ -109,7 +109,7 @@ const Cart = ({ setCartState }) => {
                                 <img
                                     className="cursor-pointer"
                                     src={deleteIcon}
-                                    alt=""
+                                    alt="картинка"
                                 />
                             </div>
                         ))}
@@ -133,6 +133,11 @@ const Cart = ({ setCartState }) => {
                         <input
                             className="input_field"
                             placeholder="ваш номер"
+                            type="text"
+                        />
+                        <input
+                            className="input_field"
+                            placeholder="дополнительно"
                             type="text"
                         />
                         <input

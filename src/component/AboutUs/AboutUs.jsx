@@ -5,8 +5,8 @@ const AboutUs = () => {
         <div>
             <div className="content pt-0 md:pt-10 pb-20 ">
                 <div>
-                    <h1 className="text-center text-3xl sm:text-5xl mb-5">
-                        о нас
+                    <h1 className="text-start text-3xl sm:text-5xl mb-5">
+                        О нас
                     </h1>
                     <div className="flex flex-col md:flex-row justify-between items-center">
                         <p className="text-gray-300 text-xs sm:text-sm w-full  md:w-[50%]">
@@ -40,8 +40,8 @@ const AboutUs = () => {
                         </p>
                         <img
                             className="w-full md:w-[45%] rounded-md mt-5"
-                            src="https://i.pinimg.com/564x/07/f3/36/07f33600bf38daa0032acacb30c6a9ff.jpg"
-                            alt=""
+                            src="https://i.pinimg.com/564x/21/1e/b9/211eb9d1c0841e57eb88e0be56308ee6.jpg"
+                            alt="картинка"
                         />
                     </div>
                 </div>
@@ -64,8 +64,8 @@ const AboutUs = () => {
                         </p>
                         <img
                             className="w-full md:w-[45%] rounded-md mt-5"
-                            src="https://i.pinimg.com/564x/21/1e/b9/211eb9d1c0841e57eb88e0be56308ee6.jpg"
-                            alt=""
+                            src="https://i.pinimg.com/564x/07/f3/36/07f33600bf38daa0032acacb30c6a9ff.jpg"
+                            alt="картинка"
                         />
                     </div>
                 </div>

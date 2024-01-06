@@ -12,12 +12,20 @@ const ProductChar = ({ item }) => {
                     <p className="text-gray-400">{item.charDesc1}</p>
                 </div>
                 <div className="w-[100%] md:w-[45%] md:mt-0 mt-8">
-                    <img className="rounded-xl" src={item.charImg1} alt="" />
+                    <img
+                        className="rounded-xl"
+                        src={item.charImg1}
+                        alt="картинка"
+                    />
                 </div>
             </div>
             <div className="flex flex-col md:flex-row md:justify-between items-center mt-16">
                 <div className="w-[100%] md:w-[45%]">
-                    <img className="rounded-xl" src={item.charImg2} alt="" />
+                    <img
+                        className="rounded-xl"
+                        src={item.charImg2}
+                        alt="картинка"
+                    />
                 </div>
                 <div className="w-[100%] md:w-[45%] md:mt-0 mt-8">
                     <h2 className="text-2xl mob:text-3xl mb-5">

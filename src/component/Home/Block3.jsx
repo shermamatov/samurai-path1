@@ -14,6 +14,9 @@ const Block3 = () => {
                         <ProductCard key={item.id} item={item} />
                     ))}
                 </div>
+                <button className="font-semibold m-auto mt-10 flex items-center justify-center w-40 h-10 text-sky-500 text-xs border-inherit rounded-md border-2 border-sky-500">
+                    перейти в каталог
+                </button>
             </div>
         </div>
     );

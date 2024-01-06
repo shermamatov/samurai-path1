@@ -12,7 +12,7 @@ const ProductCard = ({ item }) => {
                 <img
                     className="rounded-lg aspect-square object-cover"
                     src={item.mainImg}
-                    alt=""
+                    alt="картинка"
                 />
                 <div className="absolute top-2 left-2 right-2 flex justify-between">
                     <div
