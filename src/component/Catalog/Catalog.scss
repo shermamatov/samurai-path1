@@ -1,19 +1,33 @@
-.css-19xm0h7-MuiButtonBase-root-MuiPaginationItem-root {
+.paginationCatalog > div > nav > ul > li > button {
     color: white !important;
-}
-.css-1v2lvtn-MuiPaginationItem-root {
-    color: white !important;
-}
-
-.css-19xm0h7-MuiButtonBase-root-MuiPaginationItem-root {
-    // border: 1px solid rgb(255, 255, 255, 0.3) !important;
     background-color: rgb(255, 255, 255, 0.1) !important;
 }
 
-.css-19xm0h7-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
-    // background-color: rgb(255, 255, 255, 0.3) !important;
+.paginationCatalog > div > nav > ul > li > div {
+    color: white !important;
+}
+
+.paginationCatalog > div > nav > ul > li > button.Mui-selected {
+    color: white !important;
     background-color: rgb(14 165 233) !important;
 }
+
+// .css-19xm0h7-MuiButtonBase-root-MuiPaginationItem-root {
+//     color: white !important;
+// }
+// .css-1v2lvtn-MuiPaginationItem-root {
+//     color: white !important;
+// }
+
+// .css-19xm0h7-MuiButtonBase-root-MuiPaginationItem-root {
+//     // border: 1px solid rgb(255, 255, 255, 0.3) !important;
+//     background-color: rgb(255, 255, 255, 0.1) !important;
+// }
+
+// .css-19xm0h7-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+//     // background-color: rgb(255, 255, 255, 0.3) !important;
+//     background-color: rgb(14 165 233) !important;
+// }
 
 .groupSearch {
     display: flex;

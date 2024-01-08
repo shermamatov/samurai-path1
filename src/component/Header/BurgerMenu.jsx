@@ -12,7 +12,7 @@ const BurgerMenu = ({ burgerState, setBurgerState }) => {
         <div
             onClick={() => setBurgerState(false)}
             className={`fixed backdrop-blur-sm flex justify-end top-0 duration-700 h-[100vh] z-20 w-[100vw] ${
-                burgerState ? "right-0" : "-right-[100%]"
+                burgerState ? "right-0" : "-right-[120%]"
             }`}
         >
             {/* <div> */}
