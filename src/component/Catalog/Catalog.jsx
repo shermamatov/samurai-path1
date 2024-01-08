@@ -22,7 +22,7 @@ const Catalog = () => {
                             <ProductCard key={item.id} item={item} />
                         ))}
                     </div>
-                    <div className="flex justify-center md:justify-end mt-16">
+                    <div className="paginationCatalog flex justify-center md:justify-end mt-16">
                         <Stack spacing={2}>
                             <Pagination
                                 count={8}

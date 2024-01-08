@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import banner from "../../assets/homeBanner1.webp";
 import bannerAdap from "../../assets/homeBanner1Adap.webp";
+import { useDispatch } from "react-redux";
+import { getProducts } from "../../store/reducers/productReducer";
 const Block1 = () => {
     let width = window.innerWidth;
+    let dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(getProducts());
+    }, []);
     return (
         <div
             className="banner_block"

@@ -1,3 +1,5 @@
+import { collection } from "firebase/firestore";
+import { db } from "./fire";
 export let arr = [
     {
         mainImg:
@@ -163,3 +165,10 @@ export let arr2 = [
         name: "samurai",
     },
 ];
+
+export const reduxConsts = {
+    ADD_PRODUCT: "ADD_PRODUCT",
+    GET_PRODUCT: "GET_PRODUCT",
+};
+
+export const productRef = collection(db, "products");
