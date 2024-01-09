@@ -11,7 +11,7 @@ const ProductCard = ({ item }) => {
             <div className="relative">
                 <img
                     className="rounded-lg aspect-square object-cover"
-                    src={item.mainImg}
+                    src={item.cardImg}
                     alt="картинка"
                 />
                 <div className="absolute top-2 left-2 right-2 flex justify-between">
@@ -37,7 +37,7 @@ const ProductCard = ({ item }) => {
             </div>
             <h3 className="text-lg mob:text-xl mt-2 mob:mt-3">{item.title}</h3>
             <p className="text-[10px] mob:text-xs mt-1 mob:mt-2 mb-1">
-                {item.desc}
+                {item.description.slice(0, 150)}...
             </p>
             {item.discount > 0 ? (
                 <div className="flex">
