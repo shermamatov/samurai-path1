@@ -6,23 +6,23 @@ import { arr } from "../../const";
 import ProductChar from "./ProductChar";
 import ProductReveiws from "./ProductReveiws";
 import bag from "../../assets/bagAdap.svg";
+import { useDispatch, useSelector } from "react-redux";
+import { getOneProduct } from "../../store/reducers/productReducer";
 
 const ProductDetails = () => {
     let { id } = useParams();
-    let [oneProduct, setOneProduct] = useState({});
-    function getOneProduct(id) {
-        let oneProdArr = arr.find((item) => item.id === parseFloat(id));
-        setOneProduct(oneProdArr);
-    }
+    let oneProduct = useSelector((item) => item.product.oneProduct);
+    // let [oneProduct, setOneProduct] = useState({});
+    let dispatch = useDispatch();
     useEffect(() => {
-        getOneProduct(id);
+        dispatch(getOneProduct(id));
     }, []);
     return (
         <div>
             <div className="content flex flex-col md:flex-row justify-between pt-10 mob:pt-20 pb-10">
                 <div className="w-100 md:w-[38%] relative">
                     {/* <img className="rounded-lg" src={oneProduct.img} alt="картинка" /> */}
-                    <DetailsSlider />
+                    <DetailsSlider oneProduct={oneProduct} />
                     <button
                         className={`z-10 absolute flex justify-center items-center rounded-lg top-1 right-1 mob:top-2 mob:right-2 w-[30%] h-8  ${
                             oneProduct.have ? "bg-sky-500" : "bg-red-500"
@@ -60,8 +60,12 @@ const ProductDetails = () => {
                         <h1 className="text-4xl mob:text-5xl">
                             {oneProduct.title}
                         </h1>
-                        <p className="text-base text-gray-400 mt-8">
-                            {oneProduct.bigDesc}
+                        <p className="mt-6">
+                            <span className="text-gray-400">тип</span>:{" "}
+                            {oneProduct.type}
+                        </p>
+                        <p className="text-base text-gray-400 mt-2">
+                            {oneProduct.description}
                         </p>
                     </div>
                     <div className="mt-6 flex flex-col">

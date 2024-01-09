@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ProductCard from "../ProductCard/ProductCard";
 import { arr } from "../../const";
+import { useDispatch, useSelector } from "react-redux";
+import { getProducts } from "../../store/reducers/productReducer";
 
 const Block3 = () => {
+    let productData = useSelector((item) => item.product.products);
+    let dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(getProducts());
+    }, []);
     return (
         <div className="">
             <div className="content pt-8 mob:pt-20 pb-20">
@@ -10,7 +17,7 @@ const Block3 = () => {
                     Наши товары
                 </h2>
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8 mob:mt-16">
-                    {arr.map((item) => (
+                    {productData?.map((item) => (
                         <ProductCard key={item.id} item={item} />
                     ))}
                 </div>

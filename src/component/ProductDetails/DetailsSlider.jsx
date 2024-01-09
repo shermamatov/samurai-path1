@@ -11,9 +11,9 @@ import "swiper/css/thumbs";
 import "./DetailsSlider.css";
 import { arr } from "../../const";
 // import required modules
-import { FreeMode, Navigation, Thumbs } from "swiper/modules";
+import { Autoplay, FreeMode, Navigation, Thumbs } from "swiper/modules";
 
-export default function DetailsSlider() {
+export default function DetailsSlider({ oneProduct }) {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
     return (
         <>
@@ -24,14 +24,19 @@ export default function DetailsSlider() {
                 }}
                 loop={true}
                 spaceBetween={10}
+                centeredSlides={true}
                 navigation={true}
                 thumbs={{ swiper: thumbsSwiper }}
-                modules={[FreeMode, Navigation, Thumbs]}
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                }}
+                modules={[FreeMode, Navigation, Thumbs, Autoplay]}
                 className="mySwiper2"
             >
-                {arr.map((item) => (
-                    <SwiperSlide key={item.id}>
-                        <img src={item.mainImg} alt="картинка" />
+                {oneProduct?.productImg?.map((item, index) => (
+                    <SwiperSlide key={index}>
+                        <img src={item} alt="картинка" />
                     </SwiperSlide>
                 ))}
             </Swiper>
@@ -39,15 +44,15 @@ export default function DetailsSlider() {
                 onSwiper={setThumbsSwiper}
                 loop={true}
                 spaceBetween={5}
-                slidesPerView={5}
+                slidesPerView={4}
                 freeMode={true}
                 watchSlidesProgress={true}
                 modules={[FreeMode, Navigation, Thumbs]}
                 className="mySwiper"
             >
-                {arr.map((item) => (
-                    <SwiperSlide key={item.id}>
-                        <img src={item.mainImg} alt="картинка" />
+                {oneProduct?.productImg?.map((item, index) => (
+                    <SwiperSlide key={index}>
+                        <img src={item} alt="картинка" />
                     </SwiperSlide>
                 ))}
             </Swiper>

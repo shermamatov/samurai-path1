@@ -169,6 +169,7 @@ export let arr2 = [
 export const reduxConsts = {
     ADD_PRODUCT: "ADD_PRODUCT",
     GET_PRODUCT: "GET_PRODUCT",
+    GET_ONE_PRODUCT: "GET_ONE_PRODUCT",
 };
 
 export const productRef = collection(db, "products");
