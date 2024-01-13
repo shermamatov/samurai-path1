@@ -1,22 +1,32 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Block4 from "../Home/Block4";
 import DetailsSlider from "./DetailsSlider";
-import { arr } from "../../const";
 import ProductChar from "./ProductChar";
 import ProductReveiws from "./ProductReveiws";
 import bag from "../../assets/bagAdap.svg";
 import { useDispatch, useSelector } from "react-redux";
-import { getOneProduct } from "../../store/reducers/productReducer";
+import {
+    addProductToCart,
+    getOneProduct,
+} from "../../store/reducers/productReducer";
 
 const ProductDetails = () => {
     let { id } = useParams();
+    let [chekerState, setChekerState] = useState(false);
     let oneProduct = useSelector((item) => item.product.oneProduct);
-    // let [oneProduct, setOneProduct] = useState({});
     let dispatch = useDispatch();
+
+    function checkLocalStorage(id) {
+        let psevdoCartArr = JSON.parse(localStorage.getItem("cart") || "[]");
+        let flag = psevdoCartArr.some((item) => item.id === id);
+        setChekerState(flag);
+    }
+
     useEffect(() => {
         dispatch(getOneProduct(id));
+        checkLocalStorage(oneProduct.id);
     }, []);
+
     return (
         <div>
             <div className="content flex flex-col md:flex-row justify-between pt-10 mob:pt-20 pb-10">
@@ -60,18 +70,23 @@ const ProductDetails = () => {
                         <h1 className="text-4xl mob:text-5xl">
                             {oneProduct.title}
                         </h1>
-                        <p className="mt-6">
-                            <span className="text-gray-400">тип</span>:{" "}
-                            {oneProduct.type}
+                        <p className="mt-6 text-gray-400">
+                            тип:
+                            <span className="text-sky-500 ml-2 cursor-pointer">
+                                {oneProduct.type}
+                            </span>
+                        </p>
+                        <p className="text-gray-400">
+                            бренд:
+                            <span className="text-sky-500 ml-2 cursor-pointer">
+                                {oneProduct.brend}
+                            </span>
                         </p>
                         <p className="text-base text-gray-400 mt-2">
                             {oneProduct.description}
                         </p>
                     </div>
                     <div className="mt-6 flex flex-col">
-                        {/* <strong className=" text-2xl text-sky-500">
-                            {oneProduct.price}сом
-                        </strong> */}
                         {oneProduct.discount > 0 ? (
                             <div className="flex items-end">
                                 <p className="text-2xl font-semibold text-sky-500 ">
@@ -87,11 +102,25 @@ const ProductDetails = () => {
                             </strong>
                         )}
                         <div className="grid grid-cols-3 mob:flex">
-                            <button className="bg-sky-500 col-span-2 mob:w-32 h-10 rounded mt-4 text-sm">
+                            <button className="bg-sky-500 col-span-3 mob:w-32 h-10 rounded mt-4 text-sm">
                                 купить сейчас
                             </button>
-                            <button className="bg-[#E80E2B] text-sm ml-2 col-span-1 mob:w-32 h-10 rounded mt-4 flex justify-center items-center">
-                                в корзину
+                            <button
+                                onClick={() => {
+                                    dispatch(
+                                        addProductToCart(
+                                            oneProduct,
+                                            oneProduct.id
+                                        )
+                                    );
+                                    checkLocalStorage(oneProduct.id);
+                                }}
+                                className="bg-[#E80E2B] text-sm mob:ml-2 p-2 col-span-3 rounded mt-4 flex justify-center items-center"
+                            >
+                                {chekerState
+                                    ? "убрать из корзины"
+                                    : "добавить в корзину"}
+
                                 <img
                                     className="w-5 h-5 ml-1"
                                     src={bag}

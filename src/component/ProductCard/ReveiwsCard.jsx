@@ -3,7 +3,7 @@ import React from "react";
 const ReveiwsCard = ({ item }) => {
     return (
         <div>
-            <div className="flex flex-col gap-2 dark:text-white max-w-md w-full bg-white dark:bg-neutral-900 p-5 rounded-md mt-4 shadow-md hover:scale-105 hover:duration-150 duration-150">
+            <div className="flex flex-col gap-2 text-white max-w-md w-full bg-neutral-900 p-5 rounded-md mt-4 shadow-md hover:scale-105 hover:duration-150 duration-150">
                 <div className="flex flex-row justify-between w-full">
                     <div className="flex flex-row justify-between w-full">
                         {/* <p className="text-xs">{item.name}</p> */}

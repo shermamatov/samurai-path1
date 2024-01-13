@@ -170,6 +170,9 @@ export const reduxConsts = {
     ADD_PRODUCT: "ADD_PRODUCT",
     GET_PRODUCT: "GET_PRODUCT",
     GET_ONE_PRODUCT: "GET_ONE_PRODUCT",
+    GET_CART: "GET_CART",
+    ADD_PRODUCT_TO_CART: "ADD_PRODUCT_TO_CART",
+    SET_CART_SUM: "SET_CART_SUM",
 };
 
 export const productRef = collection(db, "products");
