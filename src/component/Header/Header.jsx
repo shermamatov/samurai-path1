@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../../assets/Logo.svg";
 import burgerMenuIcon from "../../assets/burgerMenu.svg";
 import BurgerMenu from "./BurgerMenu";
@@ -6,10 +6,20 @@ import Cart from "../Cart/Cart";
 import bag from "../../assets/bag.svg";
 import bagAdap from "../../assets/bagAdap.svg";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 const Header = () => {
     let [burgerState, setBurgerState] = useState(false);
     let [cartState, setCartState] = useState(false);
+    let [cartCount, setCartCount] = useState(0);
+    let cart = useSelector((item) => item.product.cart);
     let navigate = useNavigate();
+    function getCartCount() {
+        let cartArr = JSON.parse(localStorage.getItem("cart") || "[]");
+        setCartCount(cartArr.length);
+    }
+    useEffect(() => {
+        getCartCount();
+    }, [cart]);
     return (
         <div>
             <div className="content flex justify-between h-20 items-center relative">
@@ -57,7 +67,7 @@ const Header = () => {
                             alt="картинка"
                         />
                         <div className="absolute flex items-center justify-center -top-1 -right-1 rounded-full w-5 h-5 text-white  bg-sky-500">
-                            1
+                            {cartCount}
                         </div>
                     </button>
                 </div>
@@ -67,7 +77,7 @@ const Header = () => {
                         className="relative"
                     >
                         <div className="w-3 right-[10px] top-0 text-[8px] flex justify-center items-center h-3 rounded-full bg-sky-500 absolute">
-                            1
+                            {cartCount}
                         </div>
                         <img
                             className="w-7 mr-3"

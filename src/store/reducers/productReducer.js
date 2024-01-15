@@ -1,4 +1,4 @@
-import { addDoc, doc, getDoc, getDocs } from "firebase/firestore";
+import { addDoc, doc, getDoc, getDocs, updateDoc } from "firebase/firestore";
 import { productRef, reduxConsts } from "../../const";
 import { db } from "../../fire";
 
@@ -61,6 +61,20 @@ export const addData = (film) => {
             console.log(e);
         } finally {
             console.log("done");
+        }
+    };
+};
+
+export const editFilm = (id, data) => {
+    return async (dispatch) => {
+        try {
+            const oneProductRef = doc(db, "products", id);
+            await updateDoc(oneProductRef, data);
+            dispatch(getProducts());
+            console.log("все готово все изменил");
+        } catch (e) {
+            console.log("все говно");
+            console.log(e);
         }
     };
 };

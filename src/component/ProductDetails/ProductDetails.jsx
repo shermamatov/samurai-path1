@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import DetailsSlider from "./DetailsSlider";
 import ProductChar from "./ProductChar";
 import ProductReveiws from "./ProductReveiws";
@@ -11,10 +11,13 @@ import {
 } from "../../store/reducers/productReducer";
 
 const ProductDetails = () => {
-    let { id } = useParams();
     let [chekerState, setChekerState] = useState(false);
     let oneProduct = useSelector((item) => item.product.oneProduct);
+    let cart = useSelector((item) => item.product.cart);
+
+    let { id } = useParams();
     let dispatch = useDispatch();
+    let navigate = useNavigate();
 
     function checkLocalStorage(id) {
         let psevdoCartArr = JSON.parse(localStorage.getItem("cart") || "[]");
@@ -24,8 +27,11 @@ const ProductDetails = () => {
 
     useEffect(() => {
         dispatch(getOneProduct(id));
-        checkLocalStorage(oneProduct.id);
     }, []);
+
+    useEffect(() => {
+        checkLocalStorage(oneProduct.id);
+    }, [cart]);
 
     return (
         <div>
@@ -37,6 +43,7 @@ const ProductDetails = () => {
                         className={`z-10 absolute flex justify-center items-center rounded-lg top-1 right-1 mob:top-2 mob:right-2 w-[30%] h-8  ${
                             oneProduct.have ? "bg-sky-500" : "bg-red-500"
                         }`}
+                        onClick={() => navigate(`/edit/${oneProduct.id}`)}
                     >
                         <span className="lg:text-sm text-xs">
                             {oneProduct.have ? "в наличии" : "нет в наличии"}
@@ -101,33 +108,35 @@ const ProductDetails = () => {
                                 {oneProduct.price} сом
                             </strong>
                         )}
-                        <div className="grid grid-cols-3 mob:flex">
-                            <button className="bg-sky-500 col-span-3 mob:w-32 h-10 rounded mt-4 text-sm">
-                                купить сейчас
-                            </button>
-                            <button
-                                onClick={() => {
-                                    dispatch(
-                                        addProductToCart(
-                                            oneProduct,
-                                            oneProduct.id
-                                        )
-                                    );
-                                    checkLocalStorage(oneProduct.id);
-                                }}
-                                className="bg-[#E80E2B] text-sm mob:ml-2 p-2 col-span-3 rounded mt-4 flex justify-center items-center"
-                            >
-                                {chekerState
-                                    ? "убрать из корзины"
-                                    : "добавить в корзину"}
+                        {oneProduct.have && (
+                            <div className="grid grid-cols-3 mob:flex">
+                                <button className="bg-sky-500 col-span-3 mob:w-32 h-10 rounded mt-4 text-sm">
+                                    купить сейчас
+                                </button>
+                                <button
+                                    onClick={() => {
+                                        dispatch(
+                                            addProductToCart(
+                                                oneProduct,
+                                                oneProduct.id
+                                            )
+                                        );
+                                        checkLocalStorage(oneProduct.id);
+                                    }}
+                                    className="bg-[#E80E2B] text-sm mob:ml-2 p-2 col-span-3 rounded mt-4 flex justify-center items-center"
+                                >
+                                    {chekerState
+                                        ? "убрать из корзины"
+                                        : "добавить в корзину"}
 
-                                <img
-                                    className="w-5 h-5 ml-1"
-                                    src={bag}
-                                    alt="картинка"
-                                />
-                            </button>
-                        </div>
+                                    <img
+                                        className="w-5 h-5 ml-1"
+                                        src={bag}
+                                        alt="картинка"
+                                    />
+                                </button>
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>
