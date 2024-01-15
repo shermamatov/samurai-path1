@@ -44,7 +44,7 @@ export default function DetailsSlider({ oneProduct }) {
                 onSwiper={setThumbsSwiper}
                 loop={true}
                 spaceBetween={5}
-                slidesPerView={4}
+                slidesPerView={oneProduct?.productImg?.length <= 3 ? 3 : 4}
                 freeMode={true}
                 watchSlidesProgress={true}
                 modules={[FreeMode, Navigation, Thumbs]}

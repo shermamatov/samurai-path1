@@ -5,7 +5,8 @@ import ProductDetailsPage from "../pages/ProductDetailsPage";
 import AboutUsPage from "../pages/AboutUsPage";
 import ContactUsPage from "../pages/ContactUsPage";
 import CatalogPage from "../pages/CatalogPage";
-import AdminPage from "../pages/AdminPage";
+import AddPage from "../pages/AddPage";
+import EditPage from "../pages/EditPage";
 
 const MainRoutes = () => {
     const userRoutes = [
@@ -14,7 +15,8 @@ const MainRoutes = () => {
         { link: "/product/:name/:id", element: <ProductDetailsPage />, id: 3 },
         { link: "/contact_us", element: <ContactUsPage />, id: 4 },
         { link: "/catalog", element: <CatalogPage />, id: 5 },
-        { link: "/admin", element: <AdminPage />, id: 6 },
+        { link: "/admin", element: <AddPage />, id: 6 },
+        { link: "/edit/:id", element: <EditPage />, id: 7 },
     ];
     return (
         <>

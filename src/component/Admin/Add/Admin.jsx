@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./Admin.scss";
+import "../Admin.scss";
 import { useDispatch } from "react-redux";
 import {
     getDownloadURL,
@@ -7,9 +7,9 @@ import {
     ref,
     uploadBytesResumable,
 } from "firebase/storage";
-import { storage } from "../../fire";
-import { addData } from "../../store/reducers/productReducer";
-const Admin = () => {
+import { storage } from "../../../fire";
+import { addData } from "../../../store/reducers/productReducer";
+const Add = () => {
     // ! some states start
     let [inputCount, setInputCount] = useState([1, 1, 1, 1, 1]);
     let [imgStoreModal, setImgStoreModal] = useState(true);
@@ -70,23 +70,6 @@ const Admin = () => {
         dispatch(addData(obj));
     }
 
-    // function productImgArrConstructor(file) {
-    //     let newArr = [...productImg];
-    //     newArr.push(file);
-    //     console.log(newArr);
-    //     setProductImg(newArr);
-    // }
-    // function imageFileArrConstructor(file) {
-    //     let newArr = [...imageFileArr];
-    //     newArr.push(file);
-    //     setImageFileArr(newArr);
-    // }
-    // function uploadImgArrLoop() {
-    //     for (let i of imageFileArr) {
-    //         uploadFile(i, productImgArrConstructor);
-    //     }
-    //     console.log("done");
-    // }
     const uploadFile = (stateName, setStateName, isLoop = false) => {
         if (stateName) {
             const storageRef = ref(storage, "images/" + stateName.name);
@@ -467,4 +450,4 @@ const Admin = () => {
     );
 };
 
-export default Admin;
+export default Add;
